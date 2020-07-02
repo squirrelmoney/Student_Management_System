@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Jw1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <!-- 2019-4-19 -->
+  <servlet>
+  <servlet-name>loginServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>loginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+   <!-- 2019-4-20 -->
+  <filter>
+  <filter-name>AuthorityFilter</filter-name>
+  <filter-class>cn.edu.lingnan.filter.AuthorityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>AuthorityFilter</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+   <!-- 2019-4-21 -->
+    <servlet>
+  <servlet-name>loginout</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.loginout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>loginout</servlet-name>
+  <url-pattern>/loginout</url-pattern>
+  </servlet-mapping>
+      <!-- 2019-5-9 -->
+  <servlet>
+  <servlet-name>FindMemberServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindMemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindMemberServlet</servlet-name>
+  <url-pattern>/admin/findmember</url-pattern>
+  </servlet-mapping>
+        <!-- 2019-5-15 -->
+  <servlet>
+  <servlet-name>updateMemServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.updateMemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateMemServlet</servlet-name>
+  <url-pattern>/admin/updatemem</url-pattern>
+  </servlet-mapping>
+          <!-- 2019-5-15 -->
+  <servlet>
+  <servlet-name>updateMemServlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.updateMemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateMemServlet1</servlet-name>
+  <url-pattern>/chairman/updatemem1</url-pattern>
+  </servlet-mapping>
+          <!-- 2019-5-18 -->
+  <servlet>
+  <servlet-name>deleteMemServlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.deleteMemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>deleteMemServlet</servlet-name>
+  <url-pattern>/admin/deleteMem</url-pattern>
+  </servlet-mapping>
+            <!-- 2019-5-28 -->
+  <servlet>
+  <servlet-name>registerSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.registerSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>registerSevlet</servlet-name>
+  <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+             <!-- 2019-6-02 查找社团-->
+  <servlet>
+  <servlet-name>FindAssociationsSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindAssociationsSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindAssociationsSevlet</servlet-name>
+  <url-pattern>/admin/findassociations</url-pattern>
+  </servlet-mapping>
+             <!-- 2019-6-02 更新社团-->
+  <servlet>
+  <servlet-name>updateAssociaSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.updateAssociaSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateAssociaSevlet</servlet-name>
+  <url-pattern>/admin/updateasso</url-pattern>
+  </servlet-mapping>
+
+              <!-- 2019-6-03 查找学院-->
+  <servlet>
+  <servlet-name>FindDepartSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindDepartSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindDepartSevlet</servlet-name>
+  <url-pattern>/admin/finddepartment</url-pattern>
+  </servlet-mapping>
+                <!-- 2019-6-03 查找学院-->
+  <servlet>
+  <servlet-name>updateDepartSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.updateDepartSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateDepartSevlet</servlet-name>
+  <url-pattern>/admin/updatedepart</url-pattern>
+  </servlet-mapping>
+                  <!-- 2019-6-03 查找社团活动-->
+  <servlet>
+  <servlet-name>FindActivitiesSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindActivitiesSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindActivitiesSevlet</servlet-name>
+  <url-pattern>/admin/findactivities</url-pattern>
+  </servlet-mapping>
+                    <!-- 2019-6-03 更新与删除社团活动-->
+  <servlet>
+  <servlet-name>updateActivitiesSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.updateActivitiesSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateActivitiesSevlet</servlet-name>
+  <url-pattern>/admin/updateactivities</url-pattern>
+  </servlet-mapping>
+                      <!-- 2019-6-03 更新与删除社团活动-->
+  <servlet>
+  <servlet-name>updateActivitiesSevlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.updateActivitiesSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateActivitiesSevlet1</servlet-name>
+  <url-pattern>/chairman/updateactivities1</url-pattern>
+  </servlet-mapping>
+                      <!-- 2019-6-03 查找财务表-->
+  <servlet>
+  <servlet-name>FindFinancingSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.FindFinancingSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FindFinancingSevlet</servlet-name>
+  <url-pattern>/admin/findfinancing</url-pattern>
+  </servlet-mapping>
+                        <!-- 2019-6-03 删除与更新财务表-->
+  <servlet>
+  <servlet-name>updateFinancingSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.updateFinancingSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateFinancingSevlet</servlet-name>
+  <url-pattern>/admin/updatefinancing</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <!-- 2019-6-22 删除与更新财务表-->
+  <servlet-name>updateFinancingSevlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.updateFinancingSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateFinancingSevlet1</servlet-name>
+  <url-pattern>/chairman/updatefinancing1</url-pattern>
+  </servlet-mapping>
+                          <!-- 2019-6-03 删除与更新财务表-->
+  <servlet>
+  <servlet-name>updateFinancingSevlet2</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.updateFinancingSevlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateFinancingSevlet2</servlet-name>
+  <url-pattern>/chairman/updatefinancing2</url-pattern>
+  </servlet-mapping>
+                          <!-- 2019-6-16 插入部门-->
+  <servlet>
+  <servlet-name>insertDepartSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.insertDepartSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertDepartSevlet</servlet-name>
+  <url-pattern>/admin/insertDepart</url-pattern>
+  </servlet-mapping>
+                            <!-- 2019-6-16 插入财务-->
+  <servlet>
+  <servlet-name>insertFinancingsevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.insertFinancingsevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertFinancingsevlet</servlet-name>
+  <url-pattern>/admin/insertFinancing</url-pattern>
+  </servlet-mapping>
+   <!-- 2019-6-22 插入财务-->
+  <servlet>
+  <servlet-name>insertFinancingsevlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.insertFinancingsevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertFinancingsevlet1</servlet-name>
+  <url-pattern>/chairman/insertFinancing1</url-pattern>
+  </servlet-mapping>
+     <!-- 2019-6-22 插入财务-->
+  <servlet>
+  <servlet-name>insertFinancingsevlet2</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.insertFinancingsevlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertFinancingsevlet2</servlet-name>
+  <url-pattern>/chairman/insertFinancing2</url-pattern>
+  </servlet-mapping>
+                              <!-- 2019-6-16 插入活动-->
+  <servlet>
+  <servlet-name>insertActivitiesSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.insertActivitiesSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertActivitiesSevlet</servlet-name>
+  <url-pattern>/admin/insertActivities</url-pattern>
+  </servlet-mapping>
+                                <!-- 2019-6-22 插入活动-->
+  <servlet>
+  <servlet-name>insertActivitiesSevlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.insertActivitiesSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertActivitiesSevlet1</servlet-name>
+  <url-pattern>/chairman/insertActivities1</url-pattern>
+  </servlet-mapping>
+                       <!-- 2019-6-16 插入社团-->
+  <servlet>
+  <servlet-name>insertAssociationssevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.insertAssociationssevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertAssociationssevlet</servlet-name>
+  <url-pattern>/admin/insertAssociations</url-pattern>
+  </servlet-mapping>
+                         <!-- 2019-6-16 插入学生-->
+  <servlet>
+  <servlet-name>insertMemberSevlet</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet.insertMemberSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertMemberSevlet</servlet-name>
+  <url-pattern>/admin/insertMember</url-pattern>
+  </servlet-mapping>
+                           <!-- 2019-6-20 插入学生-->
+  <servlet>
+  <servlet-name>insertMemberSevlet1</servlet-name>
+  <servlet-class>cn.edu.lingnan.servlet1.insertMemberSevlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertMemberSevlet1</servlet-name>
+  <url-pattern>/chairman/insertMember1</url-pattern>
+  </servlet-mapping>
+  <!-- 2019-6-6 tldtest-->
+  <jsp-config>
+  <taglib>
+  <taglib-uri>/testing</taglib-uri>
+  <taglib-location>WEB-INF/tlds/testtag.tld</taglib-location>
+  </taglib>
+       <!-- 2019-6-11 tldtest-->
+    <taglib>
+  <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+  <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/sql</taglib-uri>
+  <taglib-location>/WEB-INF/tlds/sql.tld</taglib-location>
+  </taglib>
+  </jsp-config>
+  
+</web-app>
